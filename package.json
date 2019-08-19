@@ -1,0 +1,21 @@
+{
+  "name": "assignment-2-expressjs-router",
+  "version": "1.0.0",
+  "description": "Simple Express.js server using Router",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "simple-expressjs-server-router.git"
+  },
+  "author": "Steve Dinkle",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
