@@ -13,7 +13,7 @@ const router = express.Router();
 // Establish routes
 // GET /users
 router.get('/users', (req, res, next) => {
-    // Respond with the default.html file located in the views folder
+    // Respond with the users.html file located in the views folder
     res.sendFile(path.join(rootDir, 'views', 'users.html'));
 });
 
