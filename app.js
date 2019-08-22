@@ -10,7 +10,7 @@ const express = require('express');
 const app = express();
 
 // Route requires
-const defaultRoutes = require('./routes/default');
+const indexRoutes = require('./routes/index');
 const usersRoutes = require('./routes/users');
 
 // Mount the middleware functions.
@@ -18,14 +18,14 @@ const usersRoutes = require('./routes/users');
 app.use(express.static(path.join(__dirname, 'static')));
 
 // Set up middleware for routes.
-app.use(defaultRoutes);
+app.use(indexRoutes);
 app.use(usersRoutes);
 
 // Route favicon requests to an empty 204.
-app.get('/favicon.ico', (req, res, next) => res.status(204).send());
+app.get('/favicon.ico', (req, res) => res.status(204).send());
 
 // Set up the 404 route to serve a generic 404 page.
-app.use((req, res, next) => {
+app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
 

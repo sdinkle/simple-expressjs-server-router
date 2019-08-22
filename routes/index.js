@@ -12,9 +12,9 @@ const router = express.Router();
 
 // Establish routes
 // GET /
-router.get('/', (req, res, next) => {
-    // Respond with the default.html file located in the views folder
-    res.sendFile(path.join(rootDir, 'views', 'default.html'));
+router.get('/', (req, res) => {
+    // Respond with the index.html file located in the views folder
+    res.sendFile(path.join(rootDir, 'views', 'index.html'));
 });
 
 // Expose the Router object using module.exports
